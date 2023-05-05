@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+		<head>
+			<style>
+				*{
+					font-family: Arial, Helvetica, sans-serif;
+								}
+								
+								h1{
+									color: red;
+								}
+								p{
+									font-style: oblique;
+								}
+								
+								.redy{
+									border: 2px solid black;
+									border-radius: 5px;
+									width: fit-content;
+									padding: 2em;
+									background-color: beige;
+									color: blue;
+								}
+			</style>
+			
+	
+			
+			 </head>
+
+	<body>
+		
+			
+				<h1>
+			hello DEe, we need to increase our speed
+			
+		</h1>
+		
+	
+		<div class="redy">
+		<p th:text="${message}">  I love Jesus and He is my friend</p>
+		</div>
+		
+		<p th:text ="${report}"></p>
+		<p> This rates s a  <span th:text="${rating}"/></p>
+		
+		
+	</body>
+</htmlxmlns>

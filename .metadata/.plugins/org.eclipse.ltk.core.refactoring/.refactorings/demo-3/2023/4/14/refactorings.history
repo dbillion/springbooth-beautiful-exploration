@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.example.models&apos; to &apos;demo-3/src/main/java/com.example.models&apos;&#x0D;&#x0A;- Original project: &apos;demo-3&apos;&#x0D;&#x0A;- Destination element: &apos;demo-3/src/main/java/com.example.models&apos;&#x0D;&#x0A;- Original element: &apos;demo-3/src/main/java/com.example.models&apos;" description="Copy package" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.models" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.models" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1680861152171" version="1.0"/>
+</session>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html layout:decorate="layouts/defaultLayout" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="UTF-8">
+<title>Insert a tile here</title>
+</head>
+<body>
+<div layout:fragment="content">
+<div class="container mt-3 mb-3">
+<form action="#" th:action="@{/orders/doUpdate}" method="post" th:object="${orderModel}">
+<input  type="hidden" th:field="${orderModel.id}"  name="id">
+ <div class="input-group input-group-lg">
+ <span class="input-group-text" id="inputGroup-sizing-lg">Order Number</span>
+ <input type="text" th:field="${orderModel.orderNo}" name="orderNo" class="form-control" aria-labe="Sizing example input" aria-describedby="orderNumberHelp">
+ <div class="fieldError">
+ <p th:if="${#fields.hasErrors('orderNo')}" th:errors="@{orderNo}"> Order Number Error</p>
+ </div>
+ </div>
+ <div class="input-group input-group-lg">
+ <span class="input-group-text" id="inputGroup-sizing-lg">Product Name</span>
+ <input type="text" th:field="${orderModel.productName}" name="productName" class="form-control" aria-labe="Sizing example input" aria-describedby="productNameHelp">
+ <div class="fieldError">
+ <p th:if="${#fields.hasErrors('productName')}" th:errors="@{productName}"> Product  Error</p>
+ </div>
+ </div> 
+ <div class="input-group input-group-lg">
+ <span class="input-group-text" id="inputGroup-sizing-lg">Price</span>
+ <input type="text" th:field="${orderModel.price}" name="price"  class="form-control" aria-labe="Sizing example input" aria-describedby="priceNameHelp">
+ <div class="fieldError">
+ <p th:if="${#fields.hasErrors('price')}" th:errors="@{price}"> Price  Error</p>
+ </div>
+ </div>
+ <div class="input-group input-group-lg">
+ <span class="input-group-text" id="inputGroup-sizing-lg">Quantity Number</span>
+ <input type="text"  th:field="${orderModel.quantity}" name="quantity"  class="form-control" aria-labe="Sizing example input" aria-describedby="quantityNumberHelp">
+ <div class="fieldError">
+ <p th:if="${#fields.hasErrors('quantity')}" th:errors="@{quantity}"> Quantity  Error</p>
+ </div>
+ </div>
+ 
+  <button type="submit" class="btn btn-primary">Update</button>
+  <div th:if="${#fields.hasErrors('*')}">List of Errors</div>
+  <div th:each="err : ${#fields.errors('*')}">
+<span th:text="${err}" class="fieldError"></span>
+  </div>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html layout:decorate="layouts/defaultLayout" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="UTF-8">
+<title>Insert a tile here</title>
+</head>
+<body>
+<div layout:fragment="content">
+
+<form>
+  <div class="mb-3">
+    <label for="orderNumberInput" class="form-label">Order Number</label>
+    <input type="text" class="form-control" id="orderNumberInput" aria-describedby="orderNumberInput">
+    <div id="orderNumberHelp" class="form-text">Invent a number that actually works.</div>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+</body>
+</html>

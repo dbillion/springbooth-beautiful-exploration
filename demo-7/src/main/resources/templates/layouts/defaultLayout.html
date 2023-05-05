@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="en" decorate="layouts/defaultTemplate">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login page</title>
+   <link href="/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+<body>
+
+<!-- head -->
+<div th:replace="~{layouts/commonHeader :: header}"> My header will go here.</div>
+<!-- contents -->
+<section layout:fragment="content">
+<p>Replace this page with a page hat has out layout:fragement="content"</p>
+</section>
+<!-- footer -->
+<div th:replace="~{layouts/commonFooter :: footer}"> My footer will go here.</div>
+<script src="/js/bootstrap.bundle.js"></script>
+</body>
+</html>

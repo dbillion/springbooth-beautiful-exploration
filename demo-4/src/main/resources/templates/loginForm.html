@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login page</title>
+   <link hreF="/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+<body>
+
+
+<p>Login form</p>
+<div class="container my-5">
+<form action="" method="post" th:action="@{processLogin}"  th:object="${loginModel}">
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input th:field="*{username}" type="text" class="form-control" id="username" aria-describedby="usernamehelp">
+    <div id="usernameHelp" class="form-text">We'll never share your email with anyone else.</div>
+  <p class="alert alert-danger" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username error </p>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input th:field="*{password}" type="text" class="form-control" id="password">
+    <p class="alert alert-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password error </p>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+</div>
+</body>
+</html>
